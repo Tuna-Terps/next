@@ -1,0 +1,183 @@
+
+.nav {
+    position: -webkit-sticky; /* Safari */
+	position: sticky;
+	top: 0;
+    height: 50px;
+    padding: 8px;
+    /*background: #0070f3;*/
+    background-image: linear-gradient(90deg,blue, black);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    opacity: 0.95;
+    text-align: center; 
+    --bg: #242526;
+    --bg-accent: #484a4d;
+    --text-color: #dadce1;
+    --nav-size: 60px;
+    --border: 1px solid #474a4d;
+    --border-radius: 8px;
+    --speed: 500ms
+}
+.nav img {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    list-style: none;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    max-width: 50px;
+    max-height:50px;
+    float: left;
+}
+
+.nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    text-align: center;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav ul li a {
+    margin: 15px 10px;
+    justify-items: center;
+    align-items: center;
+    text-align: center;
+}
+
+.btn {
+    margin: 0.5rem;
+    padding: 0.2rem;
+    text-align: center;
+    color: inherit;
+    text-decoration: none;
+    border: 0.5px solid black;
+    border-radius: 10px;
+    transition: color 0.15s ease, border-color 0.15s ease;
+    max-width: 100px;
+    list-style-type: none;
+    /*background-color: lightslategrey;*/
+    background-image: linear-gradient(45deg, blue,grey)
+}
+.btn:hover,
+.btn:focus,
+.btn:active {
+    color: rgb(9, 228, 9);
+    border-color: rgb(9, 228, 9);
+    cursor: pointer;
+    background-image: linear-gradient(200deg, black, darkgreen)
+}
+
+
+.menu:hover,
+.menu:focus,
+.menu:active {
+    /*
+    color: rgb(9, 228, 9);
+    border-color: rgb(9, 228, 9);
+    */
+    cursor: pointer;
+}
+
+
+.btnLogout {
+    margin: 0.5rem;
+    padding: 1.5rem;
+    text-align: center;
+    color: inherit;
+    text-decoration: none;
+    border: 0.5px solid black;
+    border-radius: 10px;
+    transition: color 0.15s ease, border-color 0.15s ease;
+    max-width: 500px;
+    list-style-type: none;
+    padding: 0.5rem;
+    /*background-color: lightslategrey;*/
+    background-image: linear-gradient(45deg, lightslategrey,lightgrey)
+}
+
+/* return icons in a circle */
+.icon_button{
+    --button-size: calc(var(--nav-size)*0.5);
+    width: var(--button-size);
+    height: var(--button-size);
+    background-color: #2a7dfa;
+    border-radius: 50%;
+    padding: 5px;
+    margin: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon_button:hover {
+    filter: brightness(1.2);
+}
+.dropdown{
+    position: absolute;
+    top: 58px;
+    width: 220px;
+    transform: translateX(-45%);
+    background-color: var(--bg);
+    border: var(--border);
+    border-radius: var(--border-radius);
+    padding: 1rem;
+    overflow: hidden;
+    opacity: 0.9;
+    text-align: center;
+}
+.menu_item{
+    height: 50px;
+    display: flex;
+    align-items: center;
+    border-radius: var(--border-radius);
+    transition: background var(--speed);
+    padding: 0.5rem;
+
+}
+.menu_item:hover{
+    background-image: linear-gradient(270deg,#4d6ff8, black);
+}
+.icon_right{
+    margin-left: auto;
+}
+.menu{
+    width: 100%;
+}
+.menu_primary_enter {
+    position: absolute;
+    transform: translateX(110%);
+}
+.menu_primary_enter_active {
+    transform: translateX(0%);
+    transition: all var(--speed) ease;
+}
+.menu_primary_exit {
+    position: absolute;
+}
+.menu_primary_exit_active {
+    transform: translateX(-110%);
+    transition: all var(--speed) ease;
+}
+.menu_secondary_enter {
+    position: absolute;
+    transform: translateX(110%);
+}
+.menu_secondary_enter_active {
+    transform: translateX(0%);
+    transition: all var(--speed) ease;
+}
+.menu_secondary_exit {
+    position: absolute;
+}
+.menu_secondary_exit_active {
+    transform: translateX(110%);
+    transition: all var(--speed) ease;
+}
