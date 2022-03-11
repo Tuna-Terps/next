@@ -5,13 +5,11 @@
 	top: 0;
     height: 50px;
     padding: 8px;
-    /*background: #0070f3;*/
     background-image: linear-gradient(90deg,blue, black);
     color: #fff;
     display: flex;
     align-items: center;
     justify-content: right;
-    opacity: 0.95;
     text-align: center; 
     --bg: #242526;
     --bg-accent: #484a4d;
@@ -28,10 +26,10 @@
     list-style: none;
     list-style-type: none;
     margin: 0;
-    padding: 0;
+    padding: 3px;
     max-width: 50px;
     max-height:50px;
-    float: left;
+    left: 100px;
 }
 
 .nav ul {
@@ -43,6 +41,35 @@
     list-style-type: none;
     margin: 0;
     padding: 0;
+}
+
+.nav_item a{
+    margin: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.a:hover{
+    background-image: linear-gradient(270deg,#4dd0f8, black);
+    color: rgb(153, 255, 0);
+    transform: translateX(3%);
+    transition: all var(--speed) ease;
+    border: 1px solid rgb(153, 255, 0);
+    padding: 0.35rem;
+    margin: 0.25rem;
+    border-radius: 10px;
+}
+
+.nav_item a:hover{
+    background-image: linear-gradient(270deg,#4dd0f8, black);
+    color: rgb(153, 255, 0);
+    transform: translateX(3%);
+    transition: all var(--speed) ease;
+    border: 1px solid rgb(153, 255, 0);
+    padding: 0.35rem;
+    margin: 0.25rem;
+    border-radius: 10px;
 }
 
 .nav ul li a {
@@ -118,7 +145,9 @@
 }
 
 .icon_button:hover {
-    filter: brightness(1.2);
+    filter: brightness(1.1);
+    transition: all var(--speed) ease;
+
 }
 .dropdown{
     position: absolute;
@@ -144,6 +173,10 @@
 }
 .menu_item:hover{
     background-image: linear-gradient(270deg,#4d6ff8, black);
+    opacity: 0.7;
+    color: rgb(153, 255, 0);
+    transform: translateX(3%);
+    transition: all var(--speed) ease;
 }
 .icon_right{
     margin-left: auto;
@@ -154,6 +187,7 @@
 .menu_primary_enter {
     position: absolute;
     transform: translateX(110%);
+    transition: all var(--speed) ease;
 }
 .menu_primary_enter_active {
     transform: translateX(0%);

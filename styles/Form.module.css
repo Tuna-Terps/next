@@ -1,0 +1,98 @@
+.form {
+    justify-content: grid;
+    opacity: 0.9;
+    justify-content: center;
+    position: "center";
+    margin: 0.5rem;
+    padding: 1.0rem;
+    text-align: center;
+    border: 2px solid black;
+    border-radius: 10px;
+    transition: color 0.15s ease, border-color 0.15s ease;
+    max-width: 500px;
+    /*background-color: lightslategrey;*/
+    background-image: linear-gradient(45deg, lightslategrey,darkslategrey);
+    --speed: 500ms
+}
+
+.form_item{
+    display: grid;
+    grid-template-columns: 0.5fr 1fr 1fr;
+    justify-content: center;
+    position: center;
+    margin: 0.25rem;
+    padding: 0.5rem;
+    text-align: center;
+    color: inherit;
+    text-decoration: none;
+    border: 2px solid black;
+    border-radius: 10px;
+    transition: color 0.15s ease, border-color 0.15s ease;
+    max-width: 500px;
+    list-style-type: none;
+    background-image: linear-gradient(45deg, lightslategrey,lightgrey);
+}
+.form_item a{
+    display: grid;
+    justify-self: right;
+    background: black;
+    color: white;
+    padding: 0.25rem;
+}
+
+.label{
+    min-width: 110px;
+    align-items: center;
+    background-image: linear-gradient(45deg, blue, darkslategrey);
+    color: white;
+    padding: 0.15rem;
+    margin: 5px;
+    border-radius: 10px;
+    border: 1px solid black;
+}
+.input{
+    justify-self: center;
+    border-radius: 5px;
+    margin: 1px;
+    padding: 1px;
+    color:black;
+    background-color:white;
+}
+
+.form button:hover{
+    background-image: linear-gradient(270deg,#4dd0f8, black);
+    color: rgb(153, 255, 0);
+    transform: scale3d(1%);
+    transition: all var(--speed) ease;
+    border: 1px solid rgb(153, 255, 0);
+    padding: 0.35rem;
+    margin: 0.25rem;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.mainselection {
+    overflow:hidden;
+    background:transparent;
+    /*background: url("images/dropdown_arrow.png") no-repeat #fff 319px 2px;*/
+    /* dropdown_arrow.png is a 31x28 image */
+}
+.select {
+    overflow:hidden;
+    position: 'center';
+    border:0;
+    background:white;
+    height:40px;
+    width:150px;
+    -webkit-appearance: none;
+    text-align: center;
+}
+.option{
+    position: 'center';
+    border:0;
+    background:white;
+    height:500px;
+    width:150px;
+    -webkit-appearance: none;
+    text-align: center;
+}
