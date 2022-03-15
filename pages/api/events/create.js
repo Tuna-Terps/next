@@ -6,10 +6,13 @@ import { v4} from 'uuid';
 
 export default withApiAuthRequired(function createEvent(req, res){
     const session = getSession(req, res)
+    //if(req.authorization != process.env.APITOKEN) return res.status(400).end();
     if (!session.user || session.user === undefined) return res.status(400).end();
     console.log(session.user.nickname)
     console.log('[ API ] user session active: [Function] createEvent');
+    console.log(`[ ! Request ! ]`)
     console.log(req.body)
+    console.log(req.authorization)
     if (req.body === undefined || req.body?.desc === undefined || req?.body?.date === undefined){
         res.status(500)
         console.log(500)
@@ -22,14 +25,13 @@ export default withApiAuthRequired(function createEvent(req, res){
     const rDate = req.body.date;
     const rJudges = req.body?.judgeArray;
     const rId = req.body?.oId
+    const rCat = req.body.categories
     rJudges ?? [{_name: 'string', _id: 'testid', _categories: [{catName:'cattest', catId:'catId'}]}];
     rId ?? {id: 'placeholder'};
 
     // query to insert
     (async() => {
-
         const uId = v4()
-
         const client = await clientPromise;
         const eventDb = client.db('events');
         await eventDb.collection("eventData")
@@ -42,9 +44,7 @@ export default withApiAuthRequired(function createEvent(req, res){
             },
             _refid: `${uId}`,
             _judgeArray: rJudges,
-            _catArray: [
-
-            ]
+            _catArray: rCat
         })
         .catch(e => console.log(e))
         .then(async () => {
